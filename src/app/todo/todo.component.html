@@ -1,0 +1,87 @@
+<nb-layout-header class="header">
+    <h5>Welcome to User's page !</h5>
+</nb-layout-header>
+
+
+<h1> Details for FIrst Todo's !! use todo</h1>
+<div>
+    <table class="table">
+        <thead style="background-color:rgb(103, 126, 112)">
+            <tr>
+                <th scope="col">ToDo Post Id</th>
+                <th scope="col">ToDo user Id</th>
+                <th scope="col">ToDo Title</th>
+                <th scope="col">Task Status</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let t of todo">
+            <tr *ngIf="t.id <2 ">
+                <th scope="row">{{ t.id }}</th>
+                <td>{{ t.userId }}</td>
+                <td>{{ t.title }}</td>
+                <td>{{ t.completed }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h1> Details for Top 5 Todo's.</h1>
+<table class="table">
+    <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+            <th scope="col">ToDo Post Id</th>
+            <th scope="col">ToDo user Id</th>
+            <th scope="col">ToDo Title</th>
+            <th scope="col">Task Status</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let t of todo">
+        <tr *ngIf="t.id < 6">
+            <th scope="row">{{ t.id }}</th>
+            <td>{{ t.userId }}</td>
+            <td>{{ t.title }}</td>
+            <td>{{ t.completed }}</td>
+        </tr>
+    </tbody>
+</table>
+<h1> Details for Top 5 Todo's.</h1>
+<div>
+<table class="table">
+    <thead style="background-color:rgb(103, 126, 112)">
+        <tr>
+            <th scope="col">ToDo Post Id</th>
+            <th scope="col">ToDo user Id</th>
+            <th scope="col">ToDo Title</th>
+            <th scope="col">Task Status</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let t of todo">
+        <tr *ngIf="t.id < 6">
+            <th scope="row">{{ t.id }}</th>
+            <td>{{ t.userId }}</td>
+            <td>{{ t.title }}</td>
+            <td>{{ t.completed }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div *ngIf="user">
+    <table class="table">
+        <thead style="background-color:rgb(103, 126, 112)">
+            <tr>
+                <th scope="col">User Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Phone #</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ user.id }}</th>
+                <td>{{user.name}}</td>
+                <td>{{user.company.name}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

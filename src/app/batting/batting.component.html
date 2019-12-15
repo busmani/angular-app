@@ -1,0 +1,29 @@
+<p>batting works!</p>
+<table class="table table-bordered table-sm">
+    <thead class="thead-Pink">
+        <tr>
+            <th scope="col">Player</th>
+            <th scope="col">team</th>
+            <th scope="col">Match</th>
+            <th scope="col">Score</th>
+            <th scope="col">Balls</th>
+            <th scope="col">Avg</th>
+            <th scope="col">4s</th>
+            <th scope="col">6s</th>
+            <th scope="col">Strike Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let batsman of batsmansScores">
+            <td>{{ batsman.name }}</td>
+            <td>{{ batsman.team }}</td>
+            <td>{{ batsman.match }}</td>
+            <td>{{ batsman.score }}</td>
+            <td>{{ batsman.balls }}</td>
+            <td>{{ batsman.avg }}</td>
+            <td>{{ batsman.fours }}</td>
+            <td>{{ batsman.six }}</td>
+            <td>{{ (batsman.score / batsman.balls) * 100 | number: '1.2-2' }}</td>
+        </tr>
+    </tbody>
+</table>
